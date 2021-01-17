@@ -50,3 +50,4 @@ ActiveRecord::Schema.define(version: 2021_01_17_045939) do
   add_foreign_key "cards", "lists"
   add_foreign_key "lists", "users"
 end
+
