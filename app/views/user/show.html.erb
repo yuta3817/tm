@@ -1,0 +1,18 @@
+<div class='carddetailPage'>
+  <div class="container">
+    <div class="cardContents">
+      <div class="cardContents_title">
+        <div>名前</div>
+        <h2><%= @current_user.name %></h2>
+      </div>
+      <div class="cardContents_memo">
+        <div>E-mail</div>
+        <div><%= @current_user.email %></div>
+      </div>
+      <div class="cardContents_btnArea">
+        <%= link_to '編集する', edit_user_path, class: "edit_btn" %>
+        <%= link_to '削除をする', user_path, class: "text-danger delete_btn", method: :delete, data: { confirm: "アカウントを削除して大丈夫ですか?" } %>
+      </div>
+    </div>
+  </div>
+</div>
