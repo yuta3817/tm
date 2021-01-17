@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: utf8
   database: tm_production
   username: tm
   password: <%= ENV['TM_DATABASE_PASSWORD'] %>
