@@ -14,12 +14,6 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
-  adapter: postgresql
-  encoding: utf8
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -81,7 +75,5 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  encoding: utf8
-  database: tm_production
-  username: tm
-  password: <%= ENV['TM_DATABASE_PASSWORD'] %>
+  encoding: unicode
+  pool: 5
