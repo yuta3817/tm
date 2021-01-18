@@ -211,7 +211,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
-  bootsnap
+  bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
   devise
